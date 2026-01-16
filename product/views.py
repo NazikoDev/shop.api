@@ -12,7 +12,6 @@ from .serializers import (
     ProductWithReviewsSerializer
 )
 
-# -------- CATEGORY --------
 
 class CategoryListCreateView(ListAPIView, CreateAPIView):
     queryset = Category.objects.annotate(products_count=Count("products"))
@@ -25,7 +24,6 @@ class CategoryDetailView(RetrieveUpdateDestroyAPIView):
     lookup_field = "id"
 
 
-# -------- PRODUCT --------
 
 class ProductListCreateView(ListAPIView, CreateAPIView):
     queryset = Product.objects.all()
