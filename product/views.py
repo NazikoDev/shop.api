@@ -11,7 +11,7 @@ from .serializers import (
     ReviewSerializer,
     ProductWithReviewsSerializer
 )
-
+    
 
 class CategoryListCreateView(ListAPIView, CreateAPIView):
     queryset = Category.objects.annotate(products_count=Count("products"))
