@@ -23,4 +23,4 @@ class Review(models.Model):
     stars = models.IntegerField(default=5)  #рейтинг
 
     def __str__(self):
-        return f"Review {self.id}"
+        return f"Review {self.id}"   #type: ignore 
